@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aravind I M</title>
+    <link>https://aravindim.github.io/</link>
+    <description>Recent content on Aravind I M</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Nov 2022 19:00:00 +0530</lastBuildDate><atom:link href="https://aravindim.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to make dnf faster in Fedora</title>
+      <link>https://aravindim.github.io/blogs/howt-to-make-dnf-faster/</link>
+      <pubDate>Thu, 03 Nov 2022 19:00:00 +0530</pubDate>
+      
+      <guid>https://aravindim.github.io/blogs/howt-to-make-dnf-faster/</guid>
+      <description>Setup the config file To make dnf (Dandified Yum) faster in Fedora, you can edit the [main] section in the file /etc/dnf/dnf.conf try the following optimization tips:
+Enable Fastest Mirrors Enable fastest mirrors so that dnf will check all mirrors for the fastest one:
+[main] ... faster_mirrors=True Enable DeltaRPM Delta RPM (DRPM) lets you install packages using binary difference between old and new packages.
+First install Delta RPM if it is not already installed:</description>
+    </item>
+    
+    <item>
+      <title>Setting Up NodeJS in Guix</title>
+      <link>https://aravindim.github.io/blogs/how-to-setup-nodejs-in-guix/</link>
+      <pubDate>Thu, 03 Nov 2022 19:00:00 +0530</pubDate>
+      
+      <guid>https://aravindim.github.io/blogs/how-to-setup-nodejs-in-guix/</guid>
+      <description>Install node from guix repo Either install it into user&amp;rsquo;s guix profile using the following command:
+guix pull guix install node Or install it system-wide by adding the line (specification-&amp;gt;package &amp;ldquo;node&amp;rdquo;) to your system&amp;rsquo;s config file /etc/config.scm as shown below:
+(operating-system ... (packages (append (list ... (specification-&amp;gt;package &amp;#34;node&amp;#34;) ...) %base-packages)) ...) Reconfigure the system if installing node system-wide:
+guix pull sudo guix system reconfigure /etc/config.scm Setup custom install folder for npm packages Create a folder .</description>
+    </item>
+    
+  </channel>
+</rss>

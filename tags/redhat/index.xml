@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redhat on Aravind I M</title>
+    <link>https://aravindim.github.io/tags/redhat/</link>
+    <description>Recent content in Redhat on Aravind I M</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Nov 2022 19:00:00 +0530</lastBuildDate><atom:link href="https://aravindim.github.io/tags/redhat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to make dnf faster in Fedora</title>
+      <link>https://aravindim.github.io/blogs/howt-to-make-dnf-faster/</link>
+      <pubDate>Thu, 03 Nov 2022 19:00:00 +0530</pubDate>
+      
+      <guid>https://aravindim.github.io/blogs/howt-to-make-dnf-faster/</guid>
+      <description>Setup the config file To make dnf (Dandified Yum) faster in Fedora, you can edit the [main] section in the file /etc/dnf/dnf.conf try the following optimization tips:
+Enable Fastest Mirrors Enable fastest mirrors so that dnf will check all mirrors for the fastest one:
+[main] ... faster_mirrors=True Enable DeltaRPM Delta RPM (DRPM) lets you install packages using binary difference between old and new packages.
+First install Delta RPM if it is not already installed:</description>
+    </item>
+    
+  </channel>
+</rss>
