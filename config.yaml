@@ -131,7 +131,7 @@ params:
         - icon: fab fa-github
           url: https://github.com/AravindIM
         - icon: fab fa-linkedin
-          url: https://linkedin.com/in/aravind-i-m
+          url: https://linkedin.com/in/aravindim
         - icon: fab fa-twitter
           url: https://twitter.com/aravind_i_m
 
@@ -374,7 +374,7 @@ params:
       disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/AravindIM
-      linkedin: https://linkedin.com/aravind-i-m
+      linkedin: https://linkedin.com/in/aravindim
       twitter: https://twitter.com/aravind_i_m
       instagram: https://instagram.com/aravind.i.m
       facebook: https://facebook.com/aravind-i-m
