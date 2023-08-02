@@ -1,7 +1,7 @@
 baseURL: "https://aravindim.github.io/"
 languageCode: "en-us"
 title: "Aravind I M"
-theme: hugo-profile
+theme: hugo-dev-profile
 
 outputs:
   home:
@@ -359,11 +359,12 @@ params:
     content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
     email: aravindim@disroot.org
     btnName: Mail me
-    formspree:
+    formspark:
       enable: true # `contact.email` value will be ignored
-      formId: mqkvedwv # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+      formId: "DxEYtSrT" # Take it from your form's endpoint, like 'https://submit-form.com/abcdefgh'
       emailCaption: "Enter your email address"
       messageCaption: "Enter your message here"
+      hcaptchaSiteKey: "848466b1-d153-4d37-8390-83f6380f1c5a"
 
   footer:
     recentPosts:
