@@ -115,7 +115,7 @@ params:
     intro: "Hi, my name is"
     title: "Aravind I M."
     subtitle: "I build software"
-    content: "A passionate software developer. I tend to make use of modern technologies to build apps and websites that looks great, feels fantastic, and functions correctly. I'm also a Linux Enthusiast and have worked as System Administration."
+    content: "A passionate software developer. I tend to make use of modern technologies to build apps and websites that looks great, feels fantastic, and functions correctly. I'm also a Linux Enthusiast and have worked as System Administrator."
     image: "https://gravatar.com/avatar/c81800cc7972bd37609affd64ef63993?s=200"
     bottomImage:
       enable: true
