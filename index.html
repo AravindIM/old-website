@@ -1285,6 +1285,8 @@ Aravind I M
                     
                     <div class="row justify-content-center">
                         <form id="contact-form" action="https://submit-form.com/DxEYtSrT" onsubmit="handleFormsparkSubmit(event)" method="POST" class="col-md-7">
+                            <input type="hidden" name="_redirect" value="#" />
+                            <input type="hidden" name="_append" value="false" />
                             <div class="form-group pt-3">
                                 <input type="email" class="form-control"  name="email" required="true" placeholder='Enter your email address'>
                             </div>
@@ -1292,7 +1294,9 @@ Aravind I M
                                 <textarea class="form-control" name="message" required="true" placeholder='Enter your message here' rows="3"></textarea>
                             </div>
                             
-                            <div class="h-captcha" data-sitekey="848466b1-d153-4d37-8390-83f6380f1c5a"></div>
+                            <div class="form-group pt-3">
+                                <div class="h-captcha" data-sitekey="848466b1-d153-4d37-8390-83f6380f1c5a"></div>
+                            </div>
                             
                             <div class="form-group text-center pt-3">
                                 <button type="submit" class="btn">Mail me</button>
