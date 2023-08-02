@@ -31,7 +31,7 @@
 <meta property="og:title" content="How to make dnf faster in Fedora" />
 <meta property="og:description" content="Setup the config file To make dnf (Dandified Yum) faster in Fedora, you can edit the [main] section in the file /etc/dnf/dnf.conf try the following optimization tips:
 Enable Fastest Mirrors Enable fastest mirrors so that dnf will check all mirrors for the fastest one:
-[main] ... faster_mirrors=True Enable DeltaRPM Delta RPM (DRPM) lets you install packages using binary difference between old and new packages.
+[main] ... fastestmirror=True Enable DeltaRPM Delta RPM (DRPM) lets you install packages using binary difference between old and new packages.
 First install Delta RPM if it is not already installed:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://aravindim.github.io/blogs/howt-to-make-dnf-faster/" /><meta property="article:section" content="blogs" />
@@ -42,7 +42,7 @@ First install Delta RPM if it is not already installed:" />
 <meta name="twitter:title" content="How to make dnf faster in Fedora"/>
 <meta name="twitter:description" content="Setup the config file To make dnf (Dandified Yum) faster in Fedora, you can edit the [main] section in the file /etc/dnf/dnf.conf try the following optimization tips:
 Enable Fastest Mirrors Enable fastest mirrors so that dnf will check all mirrors for the fastest one:
-[main] ... faster_mirrors=True Enable DeltaRPM Delta RPM (DRPM) lets you install packages using binary difference between old and new packages.
+[main] ... fastestmirror=True Enable DeltaRPM Delta RPM (DRPM) lets you install packages using binary difference between old and new packages.
 First install Delta RPM if it is not already installed:"/>
 
 
@@ -302,7 +302,7 @@ How to make dnf faster in Fedora | Aravind I M
 <p>Enable fastest mirrors so that dnf will check all mirrors for the fastest one:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[main]</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">...</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">faster_mirrors</span><span style="color:#f92672">=</span><span style="color:#e6db74">True</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fastestmirror</span><span style="color:#f92672">=</span><span style="color:#e6db74">True</span>
 </span></span></code></pre></div><h3 id="enable-deltarpm">Enable DeltaRPM</h3>
 <p>Delta RPM (DRPM) lets you install packages using binary difference between old and new packages.</p>
 <p>First install Delta RPM if it is not already installed:</p>
@@ -474,7 +474,7 @@ How to make dnf faster in Fedora | Aravind I M
                     <div class="card-text secondary-font">
                         <p>Setup the config file To make dnf (Dandified Yum) faster in Fedora, you can edit the [main] section in the file /etc/dnf/dnf.conf try the following optimization tips:
 Enable Fastest Mirrors Enable fastest mirrors so that dnf will check all mirrors for the fastest one:
-[main] ... faster_mirrors=True …</p>
+[main] ... fastestmirror=True …</p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
