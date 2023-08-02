@@ -7,9 +7,6 @@ async function handleFormsparkSubmit(event) {
   fetch(event.target.action, {
     method: form.method,
     body: formJson,
-    headers: {
-      Accept: "application/json",
-    },
   })
     .then((response) => {
       if (response.ok) {
