@@ -1,4 +1,4 @@
-async function handleFormspreeSubmit(event) {
+async function handleFormsparkSubmit(event) {
   event.preventDefault();
   var form = document.getElementById("contact-form");
   var data = new FormData(event.target);
