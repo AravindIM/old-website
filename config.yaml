@@ -51,7 +51,7 @@ params:
   title: "Aravind I M"
   description: My personal blogging site
   # staticPath: ""  # The path to serve the static files from
-  favicon: "/images/face.png"
+  favicon: "https://gravatar.com/avatar/c81800cc7972bd37609affd64ef63993?s=32"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -116,7 +116,7 @@ params:
     title: "Aravind I M."
     subtitle: "I build software"
     content: "A passionate software developer. I tend to make use of modern technologies to build apps and websites that looks great, feels fantastic, and functions correctly. I'm also a Linux Enthusiast and have worked as System Administration."
-    image: /images/face.png
+    image: "https://gravatar.com/avatar/c81800cc7972bd37609affd64ef63993?s=200"
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
@@ -139,7 +139,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/face.png"
+    image: "https://gravatar.com/avatar/c81800cc7972bd37609affd64ef63993?s=200"
     content: |-
       I am a software developer with a passion for desktop apps, mobile apps, web and cloud computing. I have a background in computer science engineering, and I have a strong interest in the intersection of technology and art. 
     skills:
