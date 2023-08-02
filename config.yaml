@@ -395,7 +395,7 @@ params:
   terms:
     read: "Read"
     toc: "Table Of Contents"
-    copyright: "Webpage made by Aravind I M. Licensed under Apache 2.0. All content is uder the Creative Commons CC-BY-SA License"
+    copyright: "Website made by Aravind I M. Licensed under Apache 2.0. All content provided on the website is licensed under the Creative Commons CC-BY-SA License"
     pageNotFound: "Oops, The page you're searching for does not exist! Please check the url address for typos! Have a great day!"
     emailText: "Checkout the developer Aravind I M!"
 
