@@ -4,7 +4,7 @@ async function handleFormsparkSubmit(event) {
   var data = new FormData(event.target);
   fetch(event.target.action, {
     method: form.method,
-    body: data,
+    body: Object.fromEntries(data.entries()),
     headers: {
       Accept: "application/json",
     },
