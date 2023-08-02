@@ -27,7 +27,7 @@ Enable fastest mirrors so that dnf will check all mirrors for the fastest one:
 ```ini
 [main]
 ...
-faster_mirrors=True
+fastestmirror=True
 ```
 
 ### Enable DeltaRPM
