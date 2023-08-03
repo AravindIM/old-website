@@ -16,13 +16,10 @@ async function handleFormsparkSubmit(event) {
       if (response.ok) {
         contactAlert("success", "Thanks for your submission!");
         form.reset();
+      } else if (response.status === 500) {
+        contactAlert("danger", "Please complete the captcha first!");
       } else {
-        response.json().then((data) => {
-          var errMessage = data.errors;
-          for (var i = 0; i < errMessage.length; i++) {
-            contactAlert("danger", errMessage[i].message);
-          }
-        });
+        contactAlert("danger", "Oops! There was a problem submitting your form");
       }
     })
     .catch((error) => {
