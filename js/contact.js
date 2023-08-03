@@ -2,11 +2,15 @@ async function handleFormsparkSubmit(event) {
   event.preventDefault();
   var form = document.getElementById("contact-form");
   var data = new FormData(event.target);
-  var formObj = Object.fromEntries(data.entries()); 
+  var formObj = Object.fromEntries(data.entries());
   var formJson = JSON.stringify(formObj);
   fetch(event.target.action, {
     method: form.method,
     body: formJson,
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
   })
     .then((response) => {
       if (response.ok) {
@@ -38,7 +42,7 @@ function contactAlert(type, message) {
   contactFormStatus.innerHTML = alert;
 
   // Remove alert after 3 seconds
-  setTimeout(function () {
+  setTimeout(function() {
     contactFormStatus.innerHTML = "";
   }, 3000);
 }
