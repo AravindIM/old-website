@@ -4,9 +4,15 @@ date: 2023-08-11T19:09:11+05:30
 draft: false
 author: "Aravind I M"
 tags:
-  - Markdown syntax
-  - Sample
-  - example
+  - Arch Linux
+  - Install
+  - UEFI
+  - SystemD Boot
+  - BTRFS
+  - LVM
+  - LUKS
+  - Unified Kernel Image (UKI)
+  - Secure Boot
 image: /images/post.jpg
 description: ""
 toc:
@@ -79,21 +85,18 @@ fdisk -l
   ```
   
 4. Print partition info to verify
-    ```
-  Command (m for help): p
-  
+  ```
+    Command (m for help): p
   ```
 
 5. Write changes (write changes and quit)
-    ```
+  ```
   Command (m for help): w
-  
   ```
 
 6. Quit fdisk (quit without writing changes in case of mistakes)
-    ```
+  ```
   Command (m for help): q
-  
   ```
   
 ### Format Boot disk
