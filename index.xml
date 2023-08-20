@@ -13,8 +13,8 @@
       <pubDate>Fri, 11 Aug 2023 19:09:11 +0530</pubDate>
       
       <guid>https://aravindim.github.io/blogs/how-to-install-arch-linux-uefi-luks-lvm-btrfs-systemdboot-uki-secure-boot/</guid>
-      <description>Installation Steps Connect to Wifi Source: iwctl
-iwctl [iwd]# device list [iwd]# device deviceName set-property Powered on [iwd]# station deviceName scan [iwd]# station deviceName get-networks [iwd]# station deviceName connect SSID exit Check internet ping archlinux.org Check system time timedatectl Partition disks Check disk fdisk -l Create partitions disk Enter fdisk fdisk /dev/sdX Create GPT label Command (m for help): g Created a new GPT disklabel (GUID: ...). Create boot partition Command (m for help): n Partition number: First sector: Last sector, +/-sectors or +/-size{K,M,G,T,P}: +512M Command (m for help): t Partition type or alias (type L to list all): uefi Make remaining partition for LUKS Command (m for help): n Partition number: First sector: Last sector, +/-sectors or +/-size{K,M,G,T,P}: Print partition info to verify Command (m for help): p</description>
+      <description>Installation Steps 1. Connect to Wifi Source: iwctl
+# iwctl [iwd]# device list [iwd]# device deviceName set-property Powered on [iwd]# station deviceName scan [iwd]# station deviceName get-networks [iwd]# station deviceName connect SSID # exit (i) Check internet $ ping archlinux.org 2. Check system time $ timedatectl 3. Partition disks (i) Check disk # fdisk -l (ii) Create partitions disk Enter fdisk # fdisk /dev/sdX Create GPT label Command (m for help): g Created a new GPT disklabel (GUID: .</description>
     </item>
     
     <item>

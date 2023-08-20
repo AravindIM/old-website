@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LUKS on Aravind I M</title>
+    <link>https://aravindim.github.io/tags/luks/</link>
+    <description>Recent content in LUKS on Aravind I M</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Aug 2023 19:09:11 +0530</lastBuildDate><atom:link href="https://aravindim.github.io/tags/luks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to install Arch Linux with UEFI &#43; LUKS &#43; LVM &#43;  BTRFS &#43; Unified Kernel Image &#43; System D Boot &#43; Secure Boot</title>
+      <link>https://aravindim.github.io/blogs/how-to-install-arch-linux-uefi-luks-lvm-btrfs-systemdboot-uki-secure-boot/</link>
+      <pubDate>Fri, 11 Aug 2023 19:09:11 +0530</pubDate>
+      
+      <guid>https://aravindim.github.io/blogs/how-to-install-arch-linux-uefi-luks-lvm-btrfs-systemdboot-uki-secure-boot/</guid>
+      <description>Installation Steps 1. Connect to Wifi Source: iwctl
+# iwctl [iwd]# device list [iwd]# device deviceName set-property Powered on [iwd]# station deviceName scan [iwd]# station deviceName get-networks [iwd]# station deviceName connect SSID # exit (i) Check internet $ ping archlinux.org 2. Check system time $ timedatectl 3. Partition disks (i) Check disk # fdisk -l (ii) Create partitions disk Enter fdisk # fdisk /dev/sdX Create GPT label Command (m for help): g Created a new GPT disklabel (GUID: .</description>
+    </item>
+    
+  </channel>
+</rss>

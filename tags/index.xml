@@ -8,29 +8,83 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 11 Aug 2023 19:09:11 +0530</lastBuildDate><atom:link href="https://aravindim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>example</title>
-      <link>https://aravindim.github.io/tags/example/</link>
+      <title>Arch Linux</title>
+      <link>https://aravindim.github.io/tags/arch-linux/</link>
       <pubDate>Fri, 11 Aug 2023 19:09:11 +0530</pubDate>
       
-      <guid>https://aravindim.github.io/tags/example/</guid>
+      <guid>https://aravindim.github.io/tags/arch-linux/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Markdown syntax</title>
-      <link>https://aravindim.github.io/tags/markdown-syntax/</link>
+      <title>BTRFS</title>
+      <link>https://aravindim.github.io/tags/btrfs/</link>
       <pubDate>Fri, 11 Aug 2023 19:09:11 +0530</pubDate>
       
-      <guid>https://aravindim.github.io/tags/markdown-syntax/</guid>
+      <guid>https://aravindim.github.io/tags/btrfs/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Sample</title>
-      <link>https://aravindim.github.io/tags/sample/</link>
+      <title>Install</title>
+      <link>https://aravindim.github.io/tags/install/</link>
       <pubDate>Fri, 11 Aug 2023 19:09:11 +0530</pubDate>
       
-      <guid>https://aravindim.github.io/tags/sample/</guid>
+      <guid>https://aravindim.github.io/tags/install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LUKS</title>
+      <link>https://aravindim.github.io/tags/luks/</link>
+      <pubDate>Fri, 11 Aug 2023 19:09:11 +0530</pubDate>
+      
+      <guid>https://aravindim.github.io/tags/luks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LVM</title>
+      <link>https://aravindim.github.io/tags/lvm/</link>
+      <pubDate>Fri, 11 Aug 2023 19:09:11 +0530</pubDate>
+      
+      <guid>https://aravindim.github.io/tags/lvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Secure Boot</title>
+      <link>https://aravindim.github.io/tags/secure-boot/</link>
+      <pubDate>Fri, 11 Aug 2023 19:09:11 +0530</pubDate>
+      
+      <guid>https://aravindim.github.io/tags/secure-boot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SystemD Boot</title>
+      <link>https://aravindim.github.io/tags/systemd-boot/</link>
+      <pubDate>Fri, 11 Aug 2023 19:09:11 +0530</pubDate>
+      
+      <guid>https://aravindim.github.io/tags/systemd-boot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UEFI</title>
+      <link>https://aravindim.github.io/tags/uefi/</link>
+      <pubDate>Fri, 11 Aug 2023 19:09:11 +0530</pubDate>
+      
+      <guid>https://aravindim.github.io/tags/uefi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unified Kernel Image (UKI)</title>
+      <link>https://aravindim.github.io/tags/unified-kernel-image-uki/</link>
+      <pubDate>Fri, 11 Aug 2023 19:09:11 +0530</pubDate>
+      
+      <guid>https://aravindim.github.io/tags/unified-kernel-image-uki/</guid>
       <description></description>
     </item>
     
@@ -62,6 +116,15 @@
     </item>
     
     <item>
+      <title>example</title>
+      <link>https://aravindim.github.io/tags/example/</link>
+      <pubDate>Thu, 03 Nov 2022 19:00:00 +0530</pubDate>
+      
+      <guid>https://aravindim.github.io/tags/example/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Fedora</title>
       <link>https://aravindim.github.io/tags/fedora/</link>
       <pubDate>Thu, 03 Nov 2022 19:00:00 +0530</pubDate>
@@ -80,6 +143,15 @@
     </item>
     
     <item>
+      <title>Markdown syntax</title>
+      <link>https://aravindim.github.io/tags/markdown-syntax/</link>
+      <pubDate>Thu, 03 Nov 2022 19:00:00 +0530</pubDate>
+      
+      <guid>https://aravindim.github.io/tags/markdown-syntax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Redhat</title>
       <link>https://aravindim.github.io/tags/redhat/</link>
       <pubDate>Thu, 03 Nov 2022 19:00:00 +0530</pubDate>
@@ -94,6 +166,15 @@
       <pubDate>Thu, 03 Nov 2022 19:00:00 +0530</pubDate>
       
       <guid>https://aravindim.github.io/tags/rhel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sample</title>
+      <link>https://aravindim.github.io/tags/sample/</link>
+      <pubDate>Thu, 03 Nov 2022 19:00:00 +0530</pubDate>
+      
+      <guid>https://aravindim.github.io/tags/sample/</guid>
       <description></description>
     </item>
     

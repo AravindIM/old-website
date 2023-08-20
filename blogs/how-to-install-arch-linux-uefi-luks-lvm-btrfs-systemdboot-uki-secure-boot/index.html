@@ -29,8 +29,8 @@
 
 
 <meta property="og:title" content="How to install Arch Linux with UEFI &#43; LUKS &#43; LVM &#43;  BTRFS &#43; Unified Kernel Image &#43; System D Boot &#43; Secure Boot" />
-<meta property="og:description" content="Installation Steps Connect to Wifi Source: iwctl
-iwctl [iwd]# device list [iwd]# device deviceName set-property Powered on [iwd]# station deviceName scan [iwd]# station deviceName get-networks [iwd]# station deviceName connect SSID exit Check internet ping archlinux.org Check system time timedatectl Partition disks Check disk fdisk -l Create partitions disk Enter fdisk fdisk /dev/sdX Create GPT label Command (m for help): g Created a new GPT disklabel (GUID: ...). Create boot partition Command (m for help): n Partition number: First sector: Last sector, &#43;/-sectors or &#43;/-size{K,M,G,T,P}: &#43;512M Command (m for help): t Partition type or alias (type L to list all): uefi Make remaining partition for LUKS Command (m for help): n Partition number: First sector: Last sector, &#43;/-sectors or &#43;/-size{K,M,G,T,P}: Print partition info to verify Command (m for help): p" />
+<meta property="og:description" content="Installation Steps 1. Connect to Wifi Source: iwctl
+# iwctl [iwd]# device list [iwd]# device deviceName set-property Powered on [iwd]# station deviceName scan [iwd]# station deviceName get-networks [iwd]# station deviceName connect SSID # exit (i) Check internet $ ping archlinux.org 2. Check system time $ timedatectl 3. Partition disks (i) Check disk # fdisk -l (ii) Create partitions disk Enter fdisk # fdisk /dev/sdX Create GPT label Command (m for help): g Created a new GPT disklabel (GUID: ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://aravindim.github.io/blogs/how-to-install-arch-linux-uefi-luks-lvm-btrfs-systemdboot-uki-secure-boot/" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2023-08-11T19:09:11+05:30" />
@@ -38,8 +38,8 @@ iwctl [iwd]# device list [iwd]# device deviceName set-property Powered on [iwd]#
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to install Arch Linux with UEFI &#43; LUKS &#43; LVM &#43;  BTRFS &#43; Unified Kernel Image &#43; System D Boot &#43; Secure Boot"/>
-<meta name="twitter:description" content="Installation Steps Connect to Wifi Source: iwctl
-iwctl [iwd]# device list [iwd]# device deviceName set-property Powered on [iwd]# station deviceName scan [iwd]# station deviceName get-networks [iwd]# station deviceName connect SSID exit Check internet ping archlinux.org Check system time timedatectl Partition disks Check disk fdisk -l Create partitions disk Enter fdisk fdisk /dev/sdX Create GPT label Command (m for help): g Created a new GPT disklabel (GUID: ...). Create boot partition Command (m for help): n Partition number: First sector: Last sector, &#43;/-sectors or &#43;/-size{K,M,G,T,P}: &#43;512M Command (m for help): t Partition type or alias (type L to list all): uefi Make remaining partition for LUKS Command (m for help): n Partition number: First sector: Last sector, &#43;/-sectors or &#43;/-size{K,M,G,T,P}: Print partition info to verify Command (m for help): p"/>
+<meta name="twitter:description" content="Installation Steps 1. Connect to Wifi Source: iwctl
+# iwctl [iwd]# device list [iwd]# device deviceName set-property Powered on [iwd]# station deviceName scan [iwd]# station deviceName get-networks [iwd]# station deviceName connect SSID # exit (i) Check internet $ ping archlinux.org 2. Check system time $ timedatectl 3. Partition disks (i) Check disk # fdisk -l (ii) Create partitions disk Enter fdisk # fdisk /dev/sdX Create GPT label Command (m for help): g Created a new GPT disklabel (GUID: ."/>
 
 
 <link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
@@ -293,28 +293,28 @@ How to install Arch Linux with UEFI &#43; LUKS &#43; LVM &#43;  BTRFS &#43; Unif
           
           <article class="page-content  p-2">
           <h1 id="installation-steps">Installation Steps</h1>
-<h2 id="connect-to-wifi">Connect to Wifi</h2>
+<h2 id="1-connect-to-wifi">1. Connect to Wifi</h2>
 <p>Source: <a href="https://wiki.archlinux.org/title/Iwd#iwctl">iwctl</a></p>
-<pre tabindex="0"><code>iwctl
-[iwd]# device list
-[iwd]# device deviceName set-property Powered on
-[iwd]# station deviceName scan
-[iwd]# station deviceName get-networks
-[iwd]# station deviceName connect SSID
-exit
-</code></pre><h3 id="check-internet">Check internet</h3>
-<pre tabindex="0"><code>ping archlinux.org
-</code></pre><h2 id="check-system-time">Check system time</h2>
-<pre tabindex="0"><code>timedatectl
-</code></pre><h2 id="partition-disks">Partition disks</h2>
-<h3 id="check-disk">Check disk</h3>
-<pre tabindex="0"><code>fdisk -l
-</code></pre><h3 id="create-partitions-disk">Create partitions disk</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># iwctl</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>iwd<span style="color:#f92672">]</span><span style="color:#75715e"># device list</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>iwd<span style="color:#f92672">]</span><span style="color:#75715e"># device deviceName set-property Powered on</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>iwd<span style="color:#f92672">]</span><span style="color:#75715e"># station deviceName scan</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>iwd<span style="color:#f92672">]</span><span style="color:#75715e"># station deviceName get-networks</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>iwd<span style="color:#f92672">]</span><span style="color:#75715e"># station deviceName connect SSID</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># exit</span>
+</span></span></code></pre></div><h3 id="i-check-internet">(i) Check internet</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ping archlinux.org
+</span></span></code></pre></div><h2 id="2-check-system-time">2. Check system time</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ timedatectl
+</span></span></code></pre></div><h2 id="3-partition-disks">3. Partition disks</h2>
+<h3 id="i-check-disk">(i) Check disk</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># fdisk -l</span>
+</span></span></code></pre></div><h3 id="ii-create-partitions-disk">(ii) Create partitions disk</h3>
 <ol>
 <li>Enter fdisk</li>
 </ol>
-<pre tabindex="0"><code>fdisk /dev/sdX
-</code></pre><ol start="2">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># fdisk /dev/sdX</span>
+</span></span></code></pre></div><ol start="2">
 <li>Create GPT label</li>
 </ol>
 <pre tabindex="0"><code>Command (m for help): g
@@ -337,313 +337,214 @@ Partition number:
 First sector: 
 Last sector, +/-sectors or +/-size{K,M,G,T,P}: 
 </code></pre><ol start="4">
-<li>Print partition info to verify
-<pre tabindex="0"><code></code></pre></li>
+<li>Print partition info to verify</li>
 </ol>
-<p>Command (m for help): p</p>
-<pre tabindex="0"><code>
-5. Write changes (write changes and quit)
-  ```
-Command (m for help): w
+<pre tabindex="0"><code>Command (m for help): p
+</code></pre><ol start="5">
+<li>Write changes (write changes and quit)</li>
+</ol>
+<pre tabindex="0"><code>Command (m for help): w
 </code></pre><ol start="6">
-<li>Quit fdisk (quit without writing changes in case of mistakes)
-<pre tabindex="0"><code></code></pre></li>
+<li>Quit fdisk (quit without writing changes in case of mistakes)</li>
 </ol>
-<p>Command (m for help): q</p>
-<pre tabindex="0"><code>
-### Format Boot disk
-</code></pre><p>mkfs.fat -F 32 -n EFI /dev/sdXY</p>
-<pre tabindex="0"><code>
-## Setup LUKS
-
-### Create LUKS partition
-</code></pre><p>cryptsetup &ndash;use-random luksFormat /dev/sdXZ
-Are you sure? YES
-Enter passphrase:
-Verify passphrase:</p>
-<pre tabindex="0"><code>
-### Open LUKS partition
-
-You can use any other name instead of cryptroot but be sure to replace it everywhere in the following commands
-</code></pre><p>cryptsetup open /dev/sdXZ cryptroot</p>
-<pre tabindex="0"><code>
-#### Note
-Once you created LVM, you only need to open the disk with cryptsetup
+<pre tabindex="0"><code>Command (m for help): q
+</code></pre><h3 id="iii-format-boot-disk">(iii) Format Boot disk</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># mkfs.fat -F 32 -n EFI /dev/sdXY</span>
+</span></span></code></pre></div><h2 id="3-setup-luks">3. Setup LUKS</h2>
+<h3 id="i-create-luks-partition">(i) Create LUKS partition</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># cryptsetup --use-random luksFormat /dev/sdXZ</span>
+</span></span><span style="display:flex;"><span>Are you sure? YES
+</span></span><span style="display:flex;"><span>Enter passphrase:
+</span></span><span style="display:flex;"><span>Verify passphrase:
+</span></span></code></pre></div><h3 id="ii-open-luks-partition">(ii) Open LUKS partition</h3>
+<p>You can use any other name instead of cryptroot but be sure to replace it everywhere in the following commands</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># cryptsetup open /dev/sdXZ cryptroot</span>
+</span></span></code></pre></div><h4 id="note">Note</h4>
+<p>Once you created LVM, you only need to open the disk with cryptsetup
 No additional command needed to access volume group (vg) all the existing LVM partitions are accessible right after unlocking the luks partition.
-This might come in handy if you wish to had to reboot the system after LVM setup
+This might come in handy if you wish to had to reboot the system after LVM setup</p>
+<h2 id="4-setup-lvm">4. Setup LVM</h2>
+<h3 id="i-create-lvm-group">(i) Create LVM group</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># pvcreate /dev/mapper/cryptroot</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># vgcreate vgroot /dev/mapper/cryptroot</span>
+</span></span></code></pre></div><h3 id="ii-create-lvm-partitions">(ii) Create LVM Partitions</h3>
+<p>This assumes you don&rsquo;t need separate home partition on LVM</p>
+<p>Create swap</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># lvcreate --size 8G vgroot --name swap</span>
+</span></span></code></pre></div><p>Create root</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># lvcreate -l +100%FREE vgroot --name root</span>
+</span></span></code></pre></div><h3 id="iii-format-lvm-partitions">(iii) Format LVM partitions</h3>
+<p>Format swap</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># mkswap /dev/vgroot/swap -L swap</span>
+</span></span></code></pre></div><p>Format root</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># mkfs.btrfs /dev/vgroot/root -L root</span>
+</span></span></code></pre></div><h2 id="5-create-btrfs-subvolumes">5. Create Btrfs Subvolumes</h2>
+<p>Mount btrfs partition to /mnt (install target root)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># mount -t btrfs LABEL=root /mnt</span>
+</span></span></code></pre></div><p>Create partitions one by one</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># btrfs subvolume create /mnt/@</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># btrfs subvolume create /mnt/@home</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># btrfs subvolume create /mnt/@tmp</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># btrfs subvolume create /mnt/@varlog</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># btrfs subvolume create /mnt/@snapshots</span>
+</span></span></code></pre></div><p>Disable Copy-on-Write for tmp and varlog</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># chattr +C /mnt/@tmp</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># chattr +C /mnt/@varlog</span>
+</span></span></code></pre></div><p>Unmount /mnt (install target root)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># umount -R /mnt</span>
+</span></span></code></pre></div><h2 id="6-mount-partitions">6. Mount Partitions</h2>
+<h3 id="i-btrfs-subvolumes">(i) Btrfs Subvolumes</h3>
+<p>The followings options can be set for mounting</p>
+<ul>
+<li>commit = time interval between data-writes in seconds</li>
+<li>x-mount.mkdir = make directory if not existing when mounting</li>
+<li>ssd = ssd based btrfs optimisations</li>
+<li>noatime = do not store access time for files (makes btrfs faster)</li>
+<li>nodiratime = do not store directory access time for files (makes btrfs faster)</li>
+<li>discard = set as async, asynchronous queued TRIM for discard freed file blocks, check below</li>
+</ul>
+<p>check if discard is supported by checking if the output is greater than 0:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># cat /sys/block/sdX/queue/discard_max_bytes</span>
+</span></span></code></pre></div><p>Mount btrfs subvolumes one by one:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># mount -t btrfs -o defaults,x-mount.mkdir,compress=zstd,ssd,noatime,nodiratime,discard=async,space_cache=v2,commit=120,subvol=@ LABEL=root /mnt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># mount -t btrfs -o defaults,x-mount.mkdir,compress=zstd,ssd,noatime,nodiratime,discard=async,space_cache=v2,commit=120,subvol=@home LABEL=root /mnt/home</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># mount -t btrfs -o defaults,x-mount.mkdir,compress=zstd,ssd,noatime,nodiratime,discard=async,space_cache=v2,commit=120,subvol=@tmp LABEL=root /mnt/tmp</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># mount -t btrfs -o defaults,x-mount.mkdir,compress=zstd,ssd,noatime,nodiratime,discard=async,space_cache=v2,commit=120,subvol=@varlog LABEL=root /mnt/var/log</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># mount -t btrfs -o defaults,x-mount.mkdir,compress=zstd,ssd,noatime,nodiratime,discard=async,space_cache=v2,commit=120,subvol=@snapshots LABEL=root /mnt/.snapshots</span>
+</span></span></code></pre></div><h3 id="ii-mount-efi-dir">(ii) Mount EFI dir</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># mkdir -p /mnt/boot/efi</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># mount LABEL=EFI /mnt/boot/efi</span>
+</span></span></code></pre></div><h2 id="7-setup-mirrorlist-using-reflector">7. Setup Mirrorlist using Reflector</h2>
+<p>Install reflector:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># pacman -Syy reflector</span>
+</span></span></code></pre></div><p>Configure mirrorlist using reflector:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># reflector --verbose --sort rate --save /etc/pacman.d/mirrorlist</span>
+</span></span></code></pre></div><h2 id="8-pacstrap-base-packages">8. Pacstrap Base Packages</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># pacstrap -K /mnt base linux linux-firmware vim nano</span>
+</span></span></code></pre></div><h2 id="9-generate-mount-info-fstab">9. Generate Mount Info Fstab</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># genfstab -L -p /mnt &gt;&gt; /mnt/etc/fstab</span>
+</span></span></code></pre></div><h2 id="10-chroot-into-installed-environment">10. Chroot into Installed Environment</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># arch-chroot /mnt</span>
+</span></span></code></pre></div><h2 id="11-set-timezone">11. Set Timezone</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># ln -sf /usr/share/zoneinfo/Region/City /etc/localtime</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># hwclock --systohc</span>
+</span></span></code></pre></div><h2 id="12-set-locale">12. Set Locale</h2>
+<p>Edit /etc/locale.gen and uncomment the required locales then run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># locale-gen</span>
+</span></span></code></pre></div><p>Create /etc/locale.conf with content:</p>
+<pre tabindex="0"><code>LANG=en_US.UTF-8
+</code></pre><h2 id="13-configure-hostname">13. Configure Hostname</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># echo yourhostname &gt;&gt; /etc/hostname</span>
+</span></span></code></pre></div><h2 id="14-install-additional-packages">14. Install additional packages</h2>
+<p>Install required programs like shell, development packages, sudo, btfs, secure boot, ucode, bluetooth, wifi, desktop environment, etc:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># pacman -Syu base-devel btrfs-progs gptfdisk zsh sudo ttf-dejavu noto-fonts noto-fonts-cjk intel-ucode polkit wpa_supplicant mesa lvm2 efibootmgr bash-completion git man pipewire wireplumber pipewire-alsa pipewire-pulse gnome</span>
+</span></span></code></pre></div><p>If installing gnome select pipewire-jack, wireplumber, noto-fonts-emoji in the proceeding interactive questions</p>
+<h2 id="15-unified-kernel-image-setup">15. Unified Kernel Image Setup</h2>
+<p>This step is useful for encrypted boot device. You can skip this step if you&rsquo;re using grub as grub comes with decrypting disk before the boot menu is shown. Most other bootloaders do not work with this setup.</p>
+<h3 id="i-configure-mkinitcpio-hooks">(i) Configure mkinitcpio Hooks</h3>
+<p>Edit /etc/mkinitcpio.conf and add systemd after base; sd-encrypt and lvm2 before filesystems:</p>
+<pre tabindex="0"><code>HOOKS=(base systemd plymouth modconf keyboard keymap block lvm2 btrfs filesystems sd-encrypt fsck)
+</code></pre><h3 id="ii-kernel-parameters">(ii) Kernel Parameters</h3>
+<p>Create /etc/kernel/cmdline with contents:</p>
+<pre tabindex="0"><code>fbcon=nodefer rw rd.luks.allow-discards quiet root=LABEL=root rootflags=subvol=@ rw splash vt.global_cursor_default=0
+</code></pre><h3 id="iii-crypttab-setup">(iii) Crypttab setup</h3>
+<p>Create file /etc/crypttab.initramfs with contents:</p>
+<pre tabindex="0"><code>root /dev/mapper/cryptroot none timeout=180,tpm2-device=auto
+</code></pre><h2 id="16-secure-boot-setup">16. Secure boot setup</h2>
+<h3 id="i-install-secure-boot">(i) Install Secure Boot</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># pacman -Syyu sbctl</span>
+</span></span></code></pre></div><h3 id="ii-create-secure-boot-keys">(ii) Create Secure boot keys</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># sbctl create-keys</span>
+</span></span></code></pre></div><h3 id="iii-enroll-keys">(iii) Enroll keys</h3>
+<p>Change attributes of keys in btrfs:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># chattr -i /sys/firmware/efi/efivars/{PK,KEK,db}*</span>
+</span></span></code></pre></div><p>In the above command, if either of PK,KEK or db causes command to fail remove that from the list and run with the rest.</p>
+<p>Now, Enroll keys along with Microsoft keys (-m):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># sbctl enroll-keys -m</span>
+</span></span></code></pre></div><p>Generate signed unified image:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># sbctl bundle -s /boot/efi/EFI/Linux/arch-linux.efi</span>
+</span></span></code></pre></div><h3 id="iv-sign-bootloader-for-secureboot">(iv) Sign Bootloader for Secureboot</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi</span>
+</span></span></code></pre></div><h2 id="17-bootloader-systemd-boot">17. Bootloader: SystemD Boot</h2>
+<p>Install Bootloader</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># bootctl install</span>
+</span></span></code></pre></div><h2 id="18-user-management">18. User Management</h2>
+<p>Create root password</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># passwd</span>
+</span></span></code></pre></div><p>create user USERNAME:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># useradd -m -G wheel,storage,power -g users -s /bin/bash USERNAME</span>
+</span></span></code></pre></div><p>create password for user USERNAME:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># passwd USERNAME</span>
+</span></span></code></pre></div><p>Don&rsquo;t forget to uncomment wheel line with visudo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># visudo</span>
+</span></span></code></pre></div><p>Search for the following line and remove the # infront of it:</p>
+<pre tabindex="0"><code>%wheel ALL=(ALL:ALL) ALL
+</code></pre><p>Switch user to USERNAME</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># sudo -u USERNAME -i</span>
+</span></span></code></pre></div><h2 id="19-enable-services">19. Enable services</h2>
+<p>Enable Gnome Display Manager:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># systemctl enable gdm</span>
+</span></span></code></pre></div><p>Enable Network Manager:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># systemctl enable NetworkManager</span>
+</span></span></code></pre></div><p>Enable Bluetooth:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># systemctl enable bluetooth</span>
+</span></span></code></pre></div><h2 id="20-install-aur-helper">20. Install Aur helper</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># pacman -Syy go</span>
+</span></span><span style="display:flex;"><span>$ git clone https://aur.archlinux.org/yay.git
+</span></span><span style="display:flex;"><span>$ cd yay
+</span></span><span style="display:flex;"><span>$ makepkg -is
+</span></span><span style="display:flex;"><span>$ cd ..
+</span></span><span style="display:flex;"><span>$ rm -rf yay
+</span></span></code></pre></div><h2 id="21-plymouth-setup">21. Plymouth Setup</h2>
+<h3 id="i-install-plymouth">(i) Install plymouth</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yay -Syy plymouth-git
+</span></span></code></pre></div><h3 id="ii-install-plymouth-theme">(ii) Install plymouth theme</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yay -Syy plymouth-theme-bgrt-better-luks 
+</span></span></code></pre></div><h3 id="iii-set-plymouth-theme">(iii) Set Plymouth theme</h3>
+<p>Show installed plymouth themes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># plymouth-set-default-theme -l</span>
+</span></span></code></pre></div><p>Set plymouth theme:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># plymouth-set-default-theme -R bgrt-better-luks</span>
+</span></span></code></pre></div><h3 id="iv-rerun-mkinitcpio">(iv) Rerun mkinitcpio</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># mkinitcpio -p linux</span>
+</span></span></code></pre></div><h3 id="v-regenerate-unified-kernel-image">(v) Regenerate Unified Kernel Image</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># sbctl generate-bundles -s</span>
+</span></span></code></pre></div><h2 id="22-finish-install">22. Finish Install</h2>
+<p>logout of user USERNAME, exit arch-chroot, unmount and reboot:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ exit
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># exit</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># umount -a</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># reboot</span>
+</span></span></code></pre></div><p>Turn on secure boot in BIOS after this. Nothing else needed for Secure Boot.</p>
+<h2 id="23-references">23. References</h2>
+<ol>
+<li><a href="https://wiki.archlinux.org/title/User:ZachHilman/Installation_-_Btrfs_%2B_LUKS2_%2B_Secure_Boot">https://wiki.archlinux.org/title/User:ZachHilman/Installation_-_Btrfs_%2B_LUKS2_%2B_Secure_Boot</a></li>
+<li><a href="https://wiki.archlinux.org/title/Installation_guide">https://wiki.archlinux.org/title/Installation_guide</a></li>
+<li><a href="https://gist.github.com/mjnaderi/28264ce68f87f52f2cabb823a503e673">https://gist.github.com/mjnaderi/28264ce68f87f52f2cabb823a503e673</a></li>
+<li><a href="https://gist.github.com/martijnvermaat/76f2e24d0239470dd71050358b4d5134">https://gist.github.com/martijnvermaat/76f2e24d0239470dd71050358b4d5134</a></li>
+<li><a href="https://nerdstuff.org/posts/2020/2020-004_arch_linux_luks_btrfs_systemd-boot/">https://nerdstuff.org/posts/2020/2020-004_arch_linux_luks_btrfs_systemd-boot/</a></li>
+<li><a href="https://github.com/Szwendacz99/Arch-install-encrypted-btrfs">https://github.com/Szwendacz99/Arch-install-encrypted-btrfs</a></li>
+<li><a href="https://www.reddit.com/r/archlinux/comments/127fp6g/plymouthencrypt_hook_no_longer_found_after_update/">https://www.reddit.com/r/archlinux/comments/127fp6g/plymouthencrypt_hook_no_longer_found_after_update/</a></li>
+<li><a href="https://bbs.archlinux.org/viewtopic.php?id=284741">https://bbs.archlinux.org/viewtopic.php?id=284741</a></li>
+<li><a href="https://www.youtube.com/watch?v=QQoZwP6-Y2k">https://www.youtube.com/watch?v=QQoZwP6-Y2k</a></li>
+<li><a href="https://github.com/AravindIM/nixos-dotfiles/blob/main/hosts/thinkpad/hardware-configuration.nix">https://github.com/AravindIM/nixos-dotfiles/blob/main/hosts/thinkpad/hardware-configuration.nix</a></li>
+<li><a href="https://github.com/AravindIM/arch-install/blob/main/install-gnome.sh">https://github.com/AravindIM/arch-install/blob/main/install-gnome.sh</a></li>
+<li><a href="https://github.com/0xadeeb/dotFiles">https://github.com/0xadeeb/dotFiles</a></li>
+<li><a href="https://github.com/0xadeeb/NixOs-config/blob/master/hosts/hp-pavilion/hardware-configuration.nix">https://github.com/0xadeeb/NixOs-config/blob/master/hosts/hp-pavilion/hardware-configuration.nix</a></li>
+<li><a href="https://bbs.archlinux.org/viewtopic.php?id=243019">https://bbs.archlinux.org/viewtopic.php?id=243019</a></li>
+<li><a href="https://wiki.archlinux.org/title/Talk:Mkinitcpio#Improvements_for_the_Common_hooks_table_and_section_about_systemd_hook">https://wiki.archlinux.org/title/Talk:Mkinitcpio#Improvements_for_the_Common_hooks_table_and_section_about_systemd_hook</a></li>
+<li><a href="https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate">https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate</a></li>
+<li><a href="https://askubuntu.com/questions/1304519/fstab-automatically-creates-mount-points">https://askubuntu.com/questions/1304519/fstab-automatically-creates-mount-points</a></li>
+<li><a href="https://wiki.archlinux.org/title/User:Bai-Chiang/Installation_notes">https://wiki.archlinux.org/title/User:Bai-Chiang/Installation_notes</a></li>
+<li><a href="https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot">https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot</a></li>
+<li><a href="https://wiki.archlinux.org/title/Unified_kernel_image">https://wiki.archlinux.org/title/Unified_kernel_image</a></li>
+<li><a href="https://wiki.archlinux.org/title/AUR_helpers">https://wiki.archlinux.org/title/AUR_helpers</a></li>
+<li><a href="https://linuxhint.com/btrfs-filesystem-mount-options/">https://linuxhint.com/btrfs-filesystem-mount-options/</a></li>
+<li><a href="https://linuxconfig.org/how-to-manage-efi-boot-manager-entries-on-linux">https://linuxconfig.org/how-to-manage-efi-boot-manager-entries-on-linux</a></li>
+<li><a href="https://wiki.archlinux.org/title/dm-crypt/Encrypting_an_entire_system#Encrypted_boot_partition_(GRUB)">https://wiki.archlinux.org/title/dm-crypt/Encrypting_an_entire_system#Encrypted_boot_partition_(GRUB)</a></li>
+<li><a href="https://git.launchpad.net/~ubuntu-core-dev/grub/+git/ubuntu/tree/debian/build-efi-images?h=debian/2.06-2ubuntu12">https://git.launchpad.net/~ubuntu-core-dev/grub/+git/ubuntu/tree/debian/build-efi-images?h=debian/2.06-2ubuntu12</a></li>
+</ol>
 
-## Setup LVM
-
-### Create LVM group
-</code></pre><p>pvcreate /dev/mapper/cryptroot
-vgcreate vgroot /dev/mapper/cryptroot</p>
-<pre tabindex="0"><code>
-### Create LVM Partitions
-This assumes you don&#39;t need separate home partition on LVM
-
-Create swap
-</code></pre><p>lvcreate &ndash;size 8G vgroot &ndash;name swap</p>
-<pre tabindex="0"><code>
-Create root
-</code></pre><p>lvcreate -l +100%FREE vgroot &ndash;name root</p>
-<pre tabindex="0"><code>
-## Format LVM partitions
-Format swap
-</code></pre><p>mkswap /dev/vgroot/swap -L swap</p>
-<pre tabindex="0"><code>Format root
-</code></pre><p>mkfs.btrfs /dev/vgroot/root -L root</p>
-<pre tabindex="0"><code>
-## Create Btrfs Subvolumes
-
-Mount btrfs partition to /mnt (install target root)
-</code></pre><p>mount -t btrfs LABEL=root /mnt</p>
-<pre tabindex="0"><code>
-Create partitions one by one
-</code></pre><p>btrfs subvolume create /mnt/@
-btrfs subvolume create /mnt/@home
-btrfs subvolume create /mnt/@tmp
-btrfs subvolume create /mnt/@varlog
-btrfs subvolume create /mnt/@snapshots</p>
-<pre tabindex="0"><code>
-Disable Copy-on-Write for tmp and varlog
-</code></pre><p>chattr +C /mnt/@tmp
-chattr +C /mnt/@varlog</p>
-<pre tabindex="0"><code>
-Unmount /mnt (install target root)
-</code></pre><p>umount -R /mnt</p>
-<pre tabindex="0"><code>
-## Mount Btrfs Subvolumes
-
-The followings options can be set for mounting
-- commit = time interval between data-writes in seconds
-- x-mount.mkdir = make directory if not existing when mounting
-- ssd = ssd based btrfs optimisations
-- noatime = do not store access time for files (makes btrfs faster)
-- nodiratime = do not store directory access time for files (makes btrfs faster)
-- discard = set as async, asynchronous queued TRIM for discard freed file blocks, check below
-
-check if discard is supported by checking if the output is greater than 0:
-</code></pre><p>cat /sys/block/sdX/queue/discard_max_bytes</p>
-<pre tabindex="0"><code>
-Mount btrfs subvolumes one by one:
-</code></pre><p>mount -t btrfs -o defaults,x-mount.mkdir,compress=zstd,ssd,noatime,nodiratime,discard=async,space_cache=v2,commit=120,subvol=@ LABEL=root /mnt
-mount -t btrfs -o defaults,x-mount.mkdir,compress=zstd,ssd,noatime,nodiratime,discard=async,space_cache=v2,commit=120,subvol=@home LABEL=root /mnt/home
-mount -t btrfs -o defaults,x-mount.mkdir,compress=zstd,ssd,noatime,nodiratime,discard=async,space_cache=v2,commit=120,subvol=@tmp LABEL=root /mnt/tmp
-mount -t btrfs -o defaults,x-mount.mkdir,compress=zstd,ssd,noatime,nodiratime,discard=async,space_cache=v2,commit=120,subvol=@varlog LABEL=root /mnt/var/log
-mount -t btrfs -o defaults,x-mount.mkdir,compress=zstd,ssd,noatime,nodiratime,discard=async,space_cache=v2,commit=120,subvol=@snapshots LABEL=root /mnt/.snapshots</p>
-<pre tabindex="0"><code>
-## Mount EFI dir
-</code></pre><p>mkdir -p /mnt/boot/efi
-mount LABEL=EFI /mnt/boot/efi</p>
-<pre tabindex="0"><code>
-## Fix Mirrorlist: Reflector
-
-Install reflector:
-</code></pre><p>pacman -Syy reflector</p>
-<pre tabindex="0"><code>
-Configure mirrorlist using reflector:
-</code></pre><p>reflector &ndash;verbose &ndash;sort rate &ndash;save /etc/pacman.d/mirrorlist</p>
-<pre tabindex="0"><code>
-## Install Base Packages: Pacstrap
-</code></pre><p>pacstrap -K /mnt base linux linux-firmware vim nano</p>
-<pre tabindex="0"><code>
-## Generate Mount Info Fstab
-</code></pre><p>genfstab -L -p /mnt &raquo; /mnt/etc/fstab</p>
-<pre tabindex="0"><code>
-## Chroot into Installed Environment
-</code></pre><p>arch-chroot /mnt</p>
-<pre tabindex="0"><code>
-## Set Timezone
-</code></pre><p>ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
-hwclock &ndash;systohc</p>
-<pre tabindex="0"><code>
-## Set Locale
-
-Edit /etc/locale.gen and uncomment the required locales then run:
-</code></pre><p>locale-gen</p>
-<pre tabindex="0"><code>
-Create /etc/locale.conf with content:
-</code></pre><p>LANG=en_US.UTF-8</p>
-<pre tabindex="0"><code>
-## Configure Hostname
-</code></pre><p>echo yourhostname &raquo; /etc/hostname</p>
-<pre tabindex="0"><code>
-## Install additional packages
-
-Install required programs like shell, development packages, sudo, btfs, secure boot, ucode, bluetooth, wifi, desktop environment, etc
-</code></pre><p>pacman -Syu base-devel btrfs-progs gptfdisk zsh sudo ttf-dejavu noto-fonts noto-fonts-cjk intel-ucode polkit wpa_supplicant mesa lvm2 efibootmgr bash-completion git man pipewire wireplumber pipewire-alsa pipewire-pulse gnome</p>
-<pre tabindex="0"><code>
-If installing gnome select pipewire-jack, wireplumber, noto-fonts-emoji in the proceeding interactive questions
-
-## Unified Kernel Image Setup
-
-This step is useful for encrypted boot device. You can skip this step if you&#39;re using grub as grub comes with decrypting disk before the boot menu is shown. Most other bootloaders do not work with this setup.
-
-### Configure mkinitcpio Hooks
-
-Edit /etc/mkinitcpio.conf and add systemd after base; sd-encrypt and lvm2 before filesystems:
-</code></pre><p>HOOKS=(base systemd plymouth modconf keyboard keymap block lvm2 btrfs filesystems sd-encrypt fsck)</p>
-<pre tabindex="0"><code>
-### Kernel Parameters
-
-Create /etc/kernel/cmdline with contents:
-</code></pre><p>fbcon=nodefer rw rd.luks.allow-discards quiet root=LABEL=root rootflags=subvol=@ rw splash vt.global_cursor_default=0</p>
-<pre tabindex="0"><code>
-### Crypttab setup
-
-Create file /etc/crypttab.initramfs with contents:
-</code></pre><p>root /dev/mapper/cryptroot none timeout=180,tpm2-device=auto</p>
-<pre tabindex="0"><code>
-### Secure boot setup
-
-Install Secure Boot:
-</code></pre><p>sudo pacman -Syyu sbctl</p>
-<pre tabindex="0"><code>
-Create Secure boot keys:
-</code></pre><p>sbctl create-keys</p>
-<pre tabindex="0"><code>
-### Enroll keys
-
-Change attributes of keys in btrfs:
-</code></pre><p>sudo chattr -i /sys/firmware/efi/efivars/{PK,KEK,db}*</p>
-<pre tabindex="0"><code>In the above command, if either of PK,KEK or db causes command to fail remove that from the list and run with the rest.
-
-Now, Enroll keys along with Microsoft keys (-m):
-</code></pre><p>sbctl enroll-keys -m</p>
-<pre tabindex="0"><code>
-Generate signed unified image:
-</code></pre><p>sbctl bundle -s /boot/efi/EFI/Linux/arch-linux.efi</p>
-<pre tabindex="0"><code>
-## Bootloader: SystemD Boot
-
-### Sign bootloader for Secureboot
-</code></pre><p>sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi</p>
-<pre tabindex="0"><code>
-## Install
-</code></pre><p>bootctl install</p>
-<pre tabindex="0"><code>
-## User Management
-Create root password
-</code></pre><p>passwd</p>
-<pre tabindex="0"><code>
-create user USERNAME:
-</code></pre><p>useradd -m -G wheel,storage,power -g users -s /bin/bash USERNAME</p>
-<pre tabindex="0"><code>
-create password for user USERNAME:
-</code></pre><p>passwd USERNAME</p>
-<pre tabindex="0"><code>
-Don&#39;t forget to uncomment wheel line with visudo:
-</code></pre><p>visudo</p>
-<pre tabindex="0"><code>
-Search for the following line and remove the # infront of it:
-</code></pre><p>%wheel ALL=(ALL:ALL) ALL</p>
-<pre tabindex="0"><code>
-Switch user to USERNAME
-</code></pre><p>sudo -u USERNAME -i</p>
-<pre tabindex="0"><code>
-## Enable services
-Enable Gnome Display Manager
-</code></pre><p>sudo systemctl enable gdm</p>
-<pre tabindex="0"><code>
-Enable Network Manager
-</code></pre><p>sudo systemctl enable NetworkManager</p>
-<pre tabindex="0"><code>
-Enable Network Manager
-</code></pre><p>sudo systemctl enable bluetooth</p>
-<pre tabindex="0"><code>
-## Install Aur helper
-</code></pre><p>sudo pacman -Syy go
-git clone <a href="https://aur.archlinux.org/yay.git">https://aur.archlinux.org/yay.git</a>
-cd yay
-makepkg -is
-cd ..
-rm -rf yay</p>
-<pre tabindex="0"><code>
-## Plymouth Setup
-
-### Install plymouth
-</code></pre><p>yay -Syy plymouth-git</p>
-<pre tabindex="0"><code>
-### Install plymouth theme
-</code></pre><p>yay -Syy plymouth-theme-bgrt-better-luks</p>
-<pre tabindex="0"><code>
-### Set Plymouth theme
-Show installed plymouth themes:
-</code></pre><p>sudo plymouth-set-default-theme -l</p>
-<pre tabindex="0"><code>
-Set plymouth theme:
-</code></pre><p>sudo plymouth-set-default-theme -R bgrt-better-luks</p>
-<pre tabindex="0"><code>
-then logout current user to get back to root:
-</code></pre><p>exit</p>
-<pre tabindex="0"><code>
-### Rerun mkinitcpio
-</code></pre><p>sudo mkinitcpio -p linux</p>
-<pre tabindex="0"><code>
-## Regenerate Unified Kernel Image
-</code></pre><p>sudo sbctl generate-bundles -s</p>
-<pre tabindex="0"><code>
-## Finish Install
-logout of user USERNAME, exit arch-chroot, unmount and reboot:
-</code></pre><p>exit
-exit
-umount -a
-reboot</p>
-<pre tabindex="0"><code>
-Turn on secure boot in BIOS after this. Nothing else needed for Secure Boot.
-
-## Reference
-
-1. https://wiki.archlinux.org/title/User:ZachHilman/Installation_-_Btrfs_%2B_LUKS2_%2B_Secure_Boot
-
-2. https://wiki.archlinux.org/title/Installation_guide
-
-3. https://gist.github.com/mjnaderi/28264ce68f87f52f2cabb823a503e673
-
-4. https://gist.github.com/martijnvermaat/76f2e24d0239470dd71050358b4d5134
-
-5. https://nerdstuff.org/posts/2020/2020-004_arch_linux_luks_btrfs_systemd-boot/
-
-6. https://github.com/Szwendacz99/Arch-install-encrypted-btrfs
-
-7. https://www.reddit.com/r/archlinux/comments/127fp6g/plymouthencrypt_hook_no_longer_found_after_update/
-
-8. https://bbs.archlinux.org/viewtopic.php?id=284741
-
-9. https://www.youtube.com/watch?v=QQoZwP6-Y2k
-
-10. https://github.com/AravindIM/nixos-dotfiles/blob/main/hosts/thinkpad/hardware-configuration.nix
-
-11. https://github.com/AravindIM/arch-install/blob/main/install-gnome.sh
-
-12. https://github.com/0xadeeb/dotFiles
-
-13. https://github.com/0xadeeb/NixOs-config/blob/master/hosts/hp-pavilion/hardware-configuration.nix
-
-14. https://bbs.archlinux.org/viewtopic.php?id=243019
-
-15. https://wiki.archlinux.org/title/Talk:Mkinitcpio#Improvements_for_the_Common_hooks_table_and_section_about_systemd_hook
-
-16. https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate
-
-17. https://askubuntu.com/questions/1304519/fstab-automatically-creates-mount-points
-
-18. https://wiki.archlinux.org/title/User:Bai-Chiang/Installation_notes
-
-19. https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot
-
-20. https://wiki.archlinux.org/title/Unified_kernel_image
-
-21. https://wiki.archlinux.org/title/AUR_helpers
-
-22. https://linuxhint.com/btrfs-filesystem-mount-options/
-
-23. https://linuxconfig.org/how-to-manage-efi-boot-manager-entries-on-linux
-
-24. https://wiki.archlinux.org/title/dm-crypt/Encrypting_an_entire_system#Encrypted_boot_partition_(GRUB)
-
-25. https://git.launchpad.net/~ubuntu-core-dev/grub/+git/ubuntu/tree/debian/build-efi-images?h=debian/2.06-2ubuntu12
-</code></pre>
           </article>
         </div>
       </div>
@@ -657,18 +558,77 @@ Turn on secure boot in BIOS after this. Nothing else needed for Secure Boot.
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#connect-to-wifi">Connect to Wifi</a>
+    <li><a href="#1-connect-to-wifi">1. Connect to Wifi</a>
       <ul>
-        <li><a href="#check-internet">Check internet</a></li>
+        <li><a href="#i-check-internet">(i) Check internet</a></li>
       </ul>
     </li>
-    <li><a href="#check-system-time">Check system time</a></li>
-    <li><a href="#partition-disks">Partition disks</a>
+    <li><a href="#2-check-system-time">2. Check system time</a></li>
+    <li><a href="#3-partition-disks">3. Partition disks</a>
       <ul>
-        <li><a href="#check-disk">Check disk</a></li>
-        <li><a href="#create-partitions-disk">Create partitions disk</a></li>
+        <li><a href="#i-check-disk">(i) Check disk</a></li>
+        <li><a href="#ii-create-partitions-disk">(ii) Create partitions disk</a></li>
+        <li><a href="#iii-format-boot-disk">(iii) Format Boot disk</a></li>
       </ul>
     </li>
+    <li><a href="#3-setup-luks">3. Setup LUKS</a>
+      <ul>
+        <li><a href="#i-create-luks-partition">(i) Create LUKS partition</a></li>
+        <li><a href="#ii-open-luks-partition">(ii) Open LUKS partition</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-setup-lvm">4. Setup LVM</a>
+      <ul>
+        <li><a href="#i-create-lvm-group">(i) Create LVM group</a></li>
+        <li><a href="#ii-create-lvm-partitions">(ii) Create LVM Partitions</a></li>
+        <li><a href="#iii-format-lvm-partitions">(iii) Format LVM partitions</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-create-btrfs-subvolumes">5. Create Btrfs Subvolumes</a></li>
+    <li><a href="#6-mount-partitions">6. Mount Partitions</a>
+      <ul>
+        <li><a href="#i-btrfs-subvolumes">(i) Btrfs Subvolumes</a></li>
+        <li><a href="#ii-mount-efi-dir">(ii) Mount EFI dir</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-setup-mirrorlist-using-reflector">7. Setup Mirrorlist using Reflector</a></li>
+    <li><a href="#8-pacstrap-base-packages">8. Pacstrap Base Packages</a></li>
+    <li><a href="#9-generate-mount-info-fstab">9. Generate Mount Info Fstab</a></li>
+    <li><a href="#10-chroot-into-installed-environment">10. Chroot into Installed Environment</a></li>
+    <li><a href="#11-set-timezone">11. Set Timezone</a></li>
+    <li><a href="#12-set-locale">12. Set Locale</a></li>
+    <li><a href="#13-configure-hostname">13. Configure Hostname</a></li>
+    <li><a href="#14-install-additional-packages">14. Install additional packages</a></li>
+    <li><a href="#15-unified-kernel-image-setup">15. Unified Kernel Image Setup</a>
+      <ul>
+        <li><a href="#i-configure-mkinitcpio-hooks">(i) Configure mkinitcpio Hooks</a></li>
+        <li><a href="#ii-kernel-parameters">(ii) Kernel Parameters</a></li>
+        <li><a href="#iii-crypttab-setup">(iii) Crypttab setup</a></li>
+      </ul>
+    </li>
+    <li><a href="#16-secure-boot-setup">16. Secure boot setup</a>
+      <ul>
+        <li><a href="#i-install-secure-boot">(i) Install Secure Boot</a></li>
+        <li><a href="#ii-create-secure-boot-keys">(ii) Create Secure boot keys</a></li>
+        <li><a href="#iii-enroll-keys">(iii) Enroll keys</a></li>
+        <li><a href="#iv-sign-bootloader-for-secureboot">(iv) Sign Bootloader for Secureboot</a></li>
+      </ul>
+    </li>
+    <li><a href="#17-bootloader-systemd-boot">17. Bootloader: SystemD Boot</a></li>
+    <li><a href="#18-user-management">18. User Management</a></li>
+    <li><a href="#19-enable-services">19. Enable services</a></li>
+    <li><a href="#20-install-aur-helper">20. Install Aur helper</a></li>
+    <li><a href="#21-plymouth-setup">21. Plymouth Setup</a>
+      <ul>
+        <li><a href="#i-install-plymouth">(i) Install plymouth</a></li>
+        <li><a href="#ii-install-plymouth-theme">(ii) Install plymouth theme</a></li>
+        <li><a href="#iii-set-plymouth-theme">(iii) Set Plymouth theme</a></li>
+        <li><a href="#iv-rerun-mkinitcpio">(iv) Rerun mkinitcpio</a></li>
+        <li><a href="#v-regenerate-unified-kernel-image">(v) Regenerate Unified Kernel Image</a></li>
+      </ul>
+    </li>
+    <li><a href="#22-finish-install">22. Finish Install</a></li>
+    <li><a href="#23-references">23. References</a></li>
   </ul>
 </nav>
               </div>
@@ -680,11 +640,23 @@ Turn on secure boot in BIOS after this. Nothing else needed for Secure Boot.
             <h5>Tags</h5>
             <ul class="tags-ul list-unstyled list-inline">
               
-              <li class="list-inline-item"><a href="https://aravindim.github.io/tags/markdown-syntax" target="_blank">Markdown syntax</a></li>
+              <li class="list-inline-item"><a href="https://aravindim.github.io/tags/arch-linux" target="_blank">Arch Linux</a></li>
               
-              <li class="list-inline-item"><a href="https://aravindim.github.io/tags/sample" target="_blank">Sample</a></li>
+              <li class="list-inline-item"><a href="https://aravindim.github.io/tags/install" target="_blank">Install</a></li>
               
-              <li class="list-inline-item"><a href="https://aravindim.github.io/tags/example" target="_blank">example</a></li>
+              <li class="list-inline-item"><a href="https://aravindim.github.io/tags/uefi" target="_blank">UEFI</a></li>
+              
+              <li class="list-inline-item"><a href="https://aravindim.github.io/tags/systemd-boot" target="_blank">SystemD Boot</a></li>
+              
+              <li class="list-inline-item"><a href="https://aravindim.github.io/tags/btrfs" target="_blank">BTRFS</a></li>
+              
+              <li class="list-inline-item"><a href="https://aravindim.github.io/tags/lvm" target="_blank">LVM</a></li>
+              
+              <li class="list-inline-item"><a href="https://aravindim.github.io/tags/luks" target="_blank">LUKS</a></li>
+              
+              <li class="list-inline-item"><a href="https://aravindim.github.io/tags/unified-kernel-image-uki" target="_blank">Unified Kernel Image (UKI)</a></li>
+              
+              <li class="list-inline-item"><a href="https://aravindim.github.io/tags/secure-boot" target="_blank">Secure Boot</a></li>
               
             </ul>
           </aside>
@@ -783,8 +755,8 @@ Turn on secure boot in BIOS after this. Nothing else needed for Secure Boot.
                         <h5 class="card-title bg-transparent" title="How to install Arch Linux with UEFI &#43; LUKS &#43; LVM &#43;  BTRFS &#43; Unified Kernel Image &#43; System D Boot &#43; Secure Boot">How to install Arch Linux …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p>Installation Steps Connect to Wifi Source: iwctl
-iwctl [iwd]# device list [iwd]# device deviceName set-property Powered on [iwd]# station deviceName scan [iwd]# station deviceName get-networks [iwd]# station deviceName connect SSID exit Check internet ping archlinux.org Check system time timedatectl …</p>
+                        <p>Installation Steps 1. Connect to Wifi Source: iwctl
+# iwctl [iwd]# device list [iwd]# device deviceName set-property Powered on [iwd]# station deviceName scan [iwd]# station deviceName get-networks [iwd]# station deviceName connect SSID # exit (i) Check internet $ ping archlinux.org 2. Check system …</p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
