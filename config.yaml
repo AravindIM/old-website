@@ -123,9 +123,9 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "#"
-      download: true
-      newPage: false
+      url: "https://bit.ly/aravind-i-m-sde-pdf"
+      download: false
+      newPage: true
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
