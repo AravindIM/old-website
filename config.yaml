@@ -139,7 +139,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "https://gravatar.com/avatar/c81800cc7972bd37609affd64ef63993?s=200"
+    image: "https://gravatar.com/avatar/491a2796191ac7be69bd095affbac9cebfa3aa587adad049d4d5b6d9a49eafe6?s=200"
     content: |-
       I am a software developer with a passion for desktop apps, mobile apps, web and cloud computing. I have a background in computer science engineering, and I have a strong interest in the intersection of technology and art. 
     skills:
