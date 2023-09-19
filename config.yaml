@@ -279,6 +279,16 @@ params:
     enable: true
     # title: "Custom Name"
     items:
+      - title: Goli (Go Lisp Interpretor)
+        content: Interpretor for Lisp written in Golang
+        image: https://opengraph.githubassets.com/hash/AravindIM/goli
+        badges:
+          - "Rust"
+          - "Compiler"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/AravindIM/goli
+
       - title: Compiler for ExPL
         content: Compiler for the language ExPL that compiles for the architecture XSM. This project is maintained as part of Compiler Lab in NITC.
         image: https://opengraph.githubassets.com/hash/AravindIM/compiler
